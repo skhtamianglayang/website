@@ -29,8 +29,38 @@ To learn more about Next.js, take a look at the following resources:
 
 You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
 
-## Deploy on Vercel
+## Deploy on cPanel with CloudLinux NodeJS Selector
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+This application is configured for deployment on cPanel with CloudLinux NodeJS Selector.
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+### ⚠️ Important: Node Modules Handling
+
+**CloudLinux NodeJS Selector uses a virtual environment approach:**
+- `node_modules` MUST be a symlink (created automatically by CloudLinux)
+- Do NOT deploy an actual `node_modules` folder to the server
+- Dependencies are installed via CloudLinux's virtual environment
+
+### Deployment Steps
+
+See [DEPLOY-CLOUDLINUX-NODEJS.md](./DEPLOY-CLOUDLINUX-NODEJS.md) for complete deployment instructions.
+
+Quick overview:
+1. Upload application files (without `node_modules`)
+2. Configure Node.js app in cPanel NodeJS Selector
+3. Enter virtual environment: `source /home/username/nodevenv/.../bin/activate`
+4. Install dependencies: `npm install`
+5. Build application: `npm run build`
+6. Restart via cPanel interface
+
+### Environment Variables
+
+Required environment variables (set in cPanel NodeJS Selector):
+- `DATABASE_URL` - PostgreSQL/MySQL connection string
+- `SESSION_SECRET` - Secret key for sessions
+- `NODE_ENV=production`
+
+## Deploy on Vercel (Alternative)
+
+You can also deploy on [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme).
+
+Check out the [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.

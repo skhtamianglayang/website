@@ -1,0 +1,5 @@
+---
+deployment:
+  tasks:
+    - export DEPLOYPATH=/home/cpanelusername/public_html/skh-website
+    - /bin/cp -R * $DEPLOYPATH

@@ -1,0 +1,215 @@
+===============================================
+FITUR WEBSITE SKH TAMIANG LAYANG
+Penjelasan Sederhana untuk Semua Orang
+===============================================
+Terakhir diperbarui: 19 Desember 2024
+
+
+1. HALAMAN UTAMA (Pertama kali buka website)
+   ============================================
+   - Gambar slide yang berganti-ganti otomatis menampilkan foto sekolah
+   - Angka statistik: berapa jumlah siswa, guru, tahun berdiri, dan program sekolah
+   - Kata sambutan dari Kepala Sekolah
+   - Foto dan profil guru-guru pilihan
+   - Berita terbaru sekolah
+   - Contoh produk yang dijual (karya siswa/guru)
+
+
+2. HALAMAN ADMIN (Khusus Pengelola Website)
+   ==========================================
+   
+   a. Kelola Berita
+      - Tambah berita baru
+      - Edit berita yang sudah ada
+      - Hapus berita
+      - Tambah foto-foto ke dalam berita
+      - Lihat dan hapus komentar dari pengunjung di berita
+   
+   b. Kelola Galeri Foto
+      - Upload foto kegiatan sekolah
+      - Upload foto fasilitas sekolah
+      - Edit keterangan foto
+      - Hapus foto
+   
+   c. Kelola Profil Guru
+      - Tambah profil guru untuk ditampilkan di halaman utama
+      - Edit data guru (nama, jabatan, foto, biografi)
+      - Hapus profil guru
+   
+   d. Kelola Info Kepala Sekolah
+      - Edit nama dan jabatan kepala sekolah
+      - Edit foto kepala sekolah
+      - Edit kata sambutan kepala sekolah
+   
+   e. Kelola Produk Jualan
+      - Tambah produk baru (karya siswa/guru)
+      - Edit data produk (nama, harga, deskripsi, foto)
+      - Hapus produk
+      - Tambah link WhatsApp dan Shopee untuk pembelian
+   
+   f. Kelola Info PPDB (Penerimaan Siswa Baru)
+      - Edit jadwal pendaftaran
+      - Edit syarat-syarat pendaftaran
+      - Edit lokasi dan kontak pendaftaran
+      - Edit catatan penting
+   
+   g. Kelola File Unduhan
+      - Tambah file yang bisa diunduh pengunjung (SK, formulir, dll)
+      - Edit keterangan file
+      - Hapus file
+      - File disimpan di Google Drive lalu link-nya ditaruh di website
+   
+   h. Kelola Akun Guru
+      - Tambah akun baru untuk guru (supaya guru bisa login)
+      - Edit data akun guru
+      - Hapus akun guru
+      - Setiap guru login pakai nama pengguna (username), bukan email
+   
+   i. Kelola Statistik Website
+      - Update jumlah siswa
+      - Update jumlah guru
+      - Update tahun berdiri
+      - Update jumlah program
+
+
+3. HALAMAN GURU (Khusus Guru yang Punya Akun)
+   ============================================
+   - Guru login pakai nama pengguna (username) dan kata sandi
+   - Guru bisa tambah produk jualan sendiri
+   - Guru bisa edit/hapus produk yang dia buat sendiri saja
+   - Guru tidak bisa edit produk guru lain
+
+
+4. HALAMAN TOKO (Tempat Jualan Produk)
+   ======================================
+   - Semua produk karya siswa dan guru ditampilkan di sini
+   - Pengunjung bisa lihat-lihat produk
+   - Pengunjung bisa klik tombol untuk beli lewat WhatsApp
+   - Pengunjung bisa klik tombol untuk beli lewat Shopee
+   - Ada keranjang belanja untuk mengumpulkan produk yang mau dibeli
+   - Bisa pilih kategori produk tertentu
+
+
+5. HALAMAN BERITA
+   ================
+   - Daftar semua berita sekolah dari yang terbaru
+   - Klik berita untuk baca selengkapnya
+   - Di halaman detail berita ada:
+     * Isi berita lengkap
+     * Foto-foto tambahan (galeri foto berita)
+     * Kolom komentar untuk pengunjung
+
+
+6. HALAMAN GALERI FOTO
+   =====================
+   - Kumpulan foto-foto kegiatan sekolah
+   - Kumpulan foto fasilitas sekolah
+   - Bisa pilih kategori foto tertentu
+   - Klik foto untuk lihat lebih besar
+
+
+7. HALAMAN PROFIL SEKOLAH
+   ========================
+   - Visi dan Misi sekolah
+   - Sejarah sekolah
+   - Daftar lengkap semua guru dan staff beserta fotonya
+   - Bisa lihat detail setiap guru
+
+
+8. HALAMAN PPDB (Penerimaan Siswa Baru)
+   ======================================
+   - Informasi lengkap cara daftar jadi siswa baru
+   - Jadwal pendaftaran kapan mulai dan selesai
+   - Syarat-syarat apa saja yang harus dibawa
+   - Lokasi tempat pendaftaran
+   - Nomor kontak yang bisa dihubungi
+   - Catatan-catatan penting lainnya
+
+
+9. HALAMAN UNDUHAN
+   =================
+   - Daftar file-file yang bisa diunduh pengunjung
+   - Contoh: SK, formulir pendaftaran, dokumen penting, dll
+   - Klik tombol unduh untuk download file
+   - File tersimpan di Google Drive
+
+
+===============================================
+FITUR KEAMANAN
+===============================================
+
+- Login untuk masuk ke halaman admin dan guru
+- Admin dan guru punya akun terpisah
+- Login pakai nama pengguna (bukan email) dan kata sandi
+- Kata sandi disimpan dengan aman (di-enkripsi)
+- Ada 3 jenis pengguna:
+  * Admin: bisa kelola semua
+  * Guru: cuma bisa kelola produk sendiri
+  * Kepala Sekolah: sama seperti admin
+
+
+===============================================
+CARA KERJA UPLOAD GAMBAR
+===============================================
+
+- Bisa upload foto dari komputer
+- Foto disimpan di server website
+- Foto bisa dipakai untuk berita, produk, galeri, dll
+- Ukuran file dibatasi supaya website tetap cepat
+
+
+===============================================
+AKUN DEMO (UNTUK TESTING)
+===============================================
+
+AKUN ADMIN:
+- Nama pengguna: admin
+  Kata sandi: admin123
+
+- Nama pengguna: kepsek
+  Kata sandi: kepsek123
+
+AKUN GURU (CONTOH):
+- Nama pengguna: budi
+  Kata sandi: guru123
+
+- Nama pengguna: siti
+  Kata sandi: guru123
+
+
+===============================================
+CATATAN PENTING
+===============================================
+
+1. Website ini bisa diakses dari komputer, tablet, atau HP
+
+2. Semua data tersimpan di database yang aman
+
+3. Kalau ada berita dihapus, foto-foto di berita itu juga ikut terhapus otomatis
+
+4. Kalau akun guru dihapus, semua produk guru itu juga ikut terhapus otomatis
+
+5. Pengunjung bisa kasih komentar di berita tanpa perlu login
+
+6. Cuma admin yang bisa hapus komentar kalau ada yang tidak pantas
+
+7. File unduhan sebaiknya taruh di Google Drive dulu, 
+   baru link Google Drive-nya yang ditaruh di website
+
+8. Setiap kali edit data, perubahan langsung tersimpan di database
+
+
+===============================================
+KESIMPULAN
+===============================================
+
+Website SKH Tamiang Layang adalah website sekolah lengkap yang punya:
+- Halaman informasi sekolah
+- Sistem berita dengan foto dan komentar
+- Galeri foto kegiatan
+- Toko online untuk jual produk karya siswa/guru
+- Sistem unduhan file
+- Info penerimaan siswa baru
+- Dashboard untuk admin dan guru kelola konten
+
+Semua bisa dikelola sendiri tanpa perlu programmer, cukup login ke halaman admin!

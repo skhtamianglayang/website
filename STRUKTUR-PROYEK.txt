@@ -1,0 +1,515 @@
+SKH TAMIANG LAYANG - WEBSITE STRUCTURE
+=============================================
+Last Updated: 19 Desember 2024
+
+/home/thazz/project/skh/
+│
+├── app/                          # Main application folder (Next.js App Router)
+│   │
+│   ├── components/               # Reusable UI components
+│   │   ├── Button.tsx           # Custom button component
+│   │   ├── Footer.tsx           # Website footer
+│   │   ├── HeroCarousel.tsx     # Homepage hero slider
+│   │   ├── ImageUpload.tsx      # Image upload component
+│   │   ├── Modal.tsx            # Modal/popup component
+│   │   ├── Navbar.tsx           # Navigation bar
+│   │   ├── NewsCard.tsx         # News card component
+│   │   └── Section.tsx          # Section wrapper component
+│   │
+│   ├── context/                  # React Context providers
+│   │   ├── AuthContext.tsx      # Authentication context (login/logout) - USERNAME based
+│   │   ├── CartContext.tsx      # Shopping cart context
+│   │   └── DataContext.tsx      # Main data context (products, teachers, news, etc)
+│   │
+│   ├── admin/                    # Admin dashboard pages
+│   │   ├── page.tsx             # Main admin dashboard
+│   │   ├── berita/              # News management
+│   │   │   └── page.tsx
+│   │   ├── galeri/              # Gallery management
+│   │   │   └── page.tsx
+│   │   ├── guru-profil/         # Teacher profile management
+│   │   │   └── page.tsx
+│   │   ├── kepala-sekolah/      # Principal info management
+│   │   │   └── page.tsx
+│   │   ├── ppdb/                # PPDB info management
+│   │   │   └── page.tsx
+│   │   ├── produk/              # Product management
+│   │   │   └── page.tsx
+│   │   ├── statistik/           # Site statistics management
+│   │   │   └── page.tsx
+│   │   ├── teachers/            # Teacher accounts management
+│   │   │   └── page.tsx
+│   │   └── unduhan/             # Download management
+│   │       └── page.tsx
+│   │
+│   ├── teacher/                  # Teacher dashboard pages
+│   │   ├── page.tsx             # Teacher dashboard
+│   │   └── products/            # Teacher product management
+│   │       └── page.tsx
+│   │
+│   ├── shop/                     # Shop/product pages
+│   │   ├── page.tsx             # Shop listing page
+│   │   ├── layout.tsx           # Shop layout
+│   │   ├── ProductCard.tsx      # Product card component
+│   │   └── CartSidebar.tsx      # Shopping cart sidebar
+│   │
+│   ├── berita/                   # News pages
+│   │   ├── page.tsx             # News listing
+│   │   └── [slug]/              # Dynamic news article pages
+│   │       └── page.tsx
+│   │
+│   ├── gallery/                  # Gallery page
+│   │   └── page.tsx
+│   │
+│   ├── profile/                  # School profile page
+│   │   └── page.tsx
+│   │
+│   ├── ppdb/                     # PPDB information page
+│   │   └── page.tsx
+│   │
+│   ├── unduhan/                  # Downloads page
+│   │   └── page.tsx
+│   │
+│   ├── login/                    # Login page (USERNAME-based authentication)
+│   │   └── page.tsx
+│   │
+│   ├── api/                      # API routes (Backend)
+│   │   ├── login/route.ts       # Authentication API (username + password)
+│   │   ├── teachers/            # Teachers CRUD API
+│   │   │   ├── route.ts         # GET all, POST new teacher (role: "teacher")
+│   │   │   └── [id]/route.ts    # GET, PATCH, DELETE by ID
+│   │   ├── products/            # Products CRUD API
+│   │   │   ├── route.ts
+│   │   │   └── [id]/route.ts
+│   │   ├── news/                # News CRUD API
+│   │   │   ├── route.ts
+│   │   │   └── [id]/
+│   │   │       ├── route.ts
+│   │   │       ├── images/route.ts
+│   │   │       └── comments/route.ts
+│   │   ├── teacher-profiles/    # Teacher Profiles CRUD API
+│   │   │   ├── route.ts
+│   │   │   └── [id]/route.ts
+│   │   ├── gallery/             # Gallery CRUD API
+│   │   │   ├── route.ts
+│   │   │   └── [id]/route.ts
+│   │   ├── principal/route.ts   # Principal Info API
+│   │   ├── comments/            # Comments CRUD API
+│   │   │   ├── route.ts
+│   │   │   └── [id]/route.ts
+│   │   ├── site-stats/route.ts  # Site Statistics API
+│   │   ├── ppdb/route.ts        # PPDB Info API
+│   │   ├── downloads/           # Downloads CRUD API
+│   │   │   ├── route.ts
+│   │   │   └── [id]/route.ts
+│   │   └── upload/route.ts      # Image Upload API
+│   │
+│   ├── page.tsx                 # Homepage
+│   ├── layout.tsx               # Root layout
+│   ├── globals.css              # Global styles
+│   ├── Providers.tsx            # Context providers wrapper
+│   └── favicon.ico              # Website favicon
+│
+├── lib/                          # Utility libraries
+│   └── prisma.ts                # Prisma client instance
+│
+├── prisma/                       # Database configuration
+│   ├── schema.prisma            # Database schema
+│   ├── seed.ts                  # Database seeding script
+│   └── migrations/              # Database migrations
+│       └── 20251214173458_init/
+│
+├── public/                       # Static assets
+│   ├── uploads/                 # Uploaded images
+│   ├── hero/                    # Hero images
+│   │   ├── hero.jpg
+│   │   ├── hero01.jpg
+│   │   ├── hero02.jpg
+│   │   ├── hero03.jpg
+│   │   ├── hero05.jpg
+│   │   └── hero06.jpg
+│   ├── img/                     # Static images
+│   │   ├── logo_skh.png
+│   │   ├── bulls2.png
+│   │   └── logobull.png
+│   ├── lagu-pandanglah-aku.ogg  # School song audio
+│   └── *.svg                    # SVG icons
+│
+├── .env                         # Environment variables (DATABASE_URL)
+├── .gitignore                   # Git ignore file
+├── package.json                 # Project dependencies
+├── tsconfig.json                # TypeScript configuration
+├── next.config.ts               # Next.js configuration
+└── STRUKTUR-PROYEK.txt          # This file
+
+
+=============================================
+API ROUTES - STRUKTUR & INPUT/OUTPUT
+=============================================
+
+┌─────────────────────────────────────────────────────────────────────────────────────────┐
+│ 1. LOGIN API (USERNAME-BASED)                                                           │
+├─────────────────────────────────────────────────────────────────────────────────────────┤
+│ Endpoint: POST /api/login                                                               │
+│                                                                                         │
+│ Deskripsi: Autentikasi user menggunakan USERNAME (bukan email)                          │
+│ Input (JSON Body): { "username": "admin", "password": "admin123" }                      │
+│ Output Success:                                                                         │
+│   { "id": "...", "email": "...", "name": "...", "role": "admin" }                       │
+│ Note: "name" field digunakan sebagai username untuk login                               │
+└─────────────────────────────────────────────────────────────────────────────────────────┘
+
+┌─────────────────────────────────────────────────────────────────────────────────────────┐
+│ 2. TEACHERS API                                                                         │
+├─────────────────────────────────────────────────────────────────────────────────────────┤
+│ GET /api/teachers                                                                       │
+│   Deskripsi: Mendapatkan semua data guru                                                │
+│                                                                                         │
+│ POST /api/teachers                                                                      │
+│   Deskripsi: Menambah guru baru                                                         │
+│   Input: { "name" (username), "email", "password", "phone" }                            │
+│   Note: role otomatis di-set ke "teacher"                                               │
+│                                                                                         │
+│ PATCH /api/teachers/[id]                                                                │
+│   Deskripsi: Update data guru                                                           │
+│                                                                                         │
+│ DELETE /api/teachers/[id]                                                               │
+│   Deskripsi: Hapus guru (cascade delete products)                                       │
+└─────────────────────────────────────────────────────────────────────────────────────────┘
+
+┌─────────────────────────────────────────────────────────────────────────────────────────┐
+│ 3. PRODUCTS API                                                                         │
+├─────────────────────────────────────────────────────────────────────────────────────────┤
+│ GET /api/products                                                                       │
+│   Deskripsi: Mendapatkan semua produk beserta info guru                                 │
+│                                                                                         │
+│ POST /api/products                                                                      │
+│   Deskripsi: Menambah produk baru                                                       │
+│   Input: { "name", "price", "description", "image", "category", "teacherId", ... }      │
+│                                                                                         │
+│ PATCH /api/products/[id]                                                                │
+│   Deskripsi: Update produk                                                              │
+│                                                                                         │
+│ DELETE /api/products/[id]                                                               │
+│   Deskripsi: Hapus produk                                                               │
+└─────────────────────────────────────────────────────────────────────────────────────────┘
+
+┌─────────────────────────────────────────────────────────────────────────────────────────┐
+│ 4. NEWS API                                                                             │
+├─────────────────────────────────────────────────────────────────────────────────────────┤
+│ GET /api/news                                                                           │
+│   Deskripsi: Mendapatkan semua berita (sorted by date desc)                             │
+│                                                                                         │
+│ POST /api/news                                                                          │
+│   Deskripsi: Menambah berita baru                                                       │
+│   Input: { "title", "date", "excerpt", "image", "slug" }                                │
+│                                                                                         │
+│ PATCH /api/news/[id]                                                                    │
+│   Deskripsi: Update berita                                                              │
+│                                                                                         │
+│ DELETE /api/news/[id]                                                                   │
+│   Deskripsi: Hapus berita                                                               │
+│                                                                                         │
+│ SUB-ROUTES:                                                                             │
+│ POST /api/news/[id]/images    - Upload gallery images for news                          │
+│ POST /api/news/[id]/comments  - Add comment to a news article                           │
+└─────────────────────────────────────────────────────────────────────────────────────────┘
+
+┌─────────────────────────────────────────────────────────────────────────────────────────┐
+│ 5. TEACHER PROFILES API                                                                 │
+├─────────────────────────────────────────────────────────────────────────────────────────┤
+│ GET /api/teacher-profiles                                                               │
+│   Deskripsi: Mendapatkan semua profil guru untuk tampilan homepage                      │
+│                                                                                         │
+│ POST /api/teacher-profiles                                                              │
+│   Deskripsi: Menambah profil guru                                                       │
+│   Input: { "name", "role", "image", "bio" }                                             │
+│                                                                                         │
+│ PATCH /api/teacher-profiles/[id]                                                        │
+│   Deskripsi: Update profil guru                                                         │
+│                                                                                         │
+│ DELETE /api/teacher-profiles/[id]                                                       │
+│   Deskripsi: Hapus profil guru                                                          │
+└─────────────────────────────────────────────────────────────────────────────────────────┘
+
+┌─────────────────────────────────────────────────────────────────────────────────────────┐
+│ 6. GALLERY API                                                                          │
+├─────────────────────────────────────────────────────────────────────────────────────────┤
+│ GET /api/gallery                                                                        │
+│   Deskripsi: Mendapatkan semua item galeri                                              │
+│                                                                                         │
+│ POST /api/gallery                                                                       │
+│   Deskripsi: Menambah item galeri                                                       │
+│   Input: { "src", "title", "category" }                                                 │
+│                                                                                         │
+│ PATCH /api/gallery/[id]                                                                 │
+│   Deskripsi: Update item galeri                                                         │
+│                                                                                         │
+│ DELETE /api/gallery/[id]                                                                │
+│   Deskripsi: Hapus item galeri                                                          │
+└─────────────────────────────────────────────────────────────────────────────────────────┘
+
+┌─────────────────────────────────────────────────────────────────────────────────────────┐
+│ 7. PRINCIPAL API                                                                        │
+├─────────────────────────────────────────────────────────────────────────────────────────┤
+│ GET /api/principal                                                                      │
+│   Deskripsi: Mendapatkan info kepala sekolah                                            │
+│                                                                                         │
+│ PATCH /api/principal                                                                    │
+│   Deskripsi: Update info kepala sekolah                                                 │
+│   Input: { "name", "title", "image", "greeting", "message" }                            │
+└─────────────────────────────────────────────────────────────────────────────────────────┘
+
+┌─────────────────────────────────────────────────────────────────────────────────────────┐
+│ 8. COMMENTS API                                                                         │
+├─────────────────────────────────────────────────────────────────────────────────────────┤
+│ GET /api/comments                                                                       │
+│   Deskripsi: Mendapatkan semua komentar pengunjung (homepage)                           │
+│                                                                                         │
+│ POST /api/comments                                                                      │
+│   Deskripsi: Menambah komentar baru                                                     │
+│   Input: { "name", "text" }                                                             │
+│                                                                                         │
+│ DELETE /api/comments/[id]                                                               │
+│   Deskripsi: Hapus komentar (admin only)                                                │
+└─────────────────────────────────────────────────────────────────────────────────────────┘
+
+┌─────────────────────────────────────────────────────────────────────────────────────────┐
+│ 9. SITE STATS API                                                                       │
+├─────────────────────────────────────────────────────────────────────────────────────────┤
+│ GET /api/site-stats                                                                     │
+│   Deskripsi: Mendapatkan statistik website                                              │
+│                                                                                         │
+│ PATCH /api/site-stats                                                                   │
+│   Deskripsi: Update statistik website                                                   │
+│   Input: { "totalStudents", "totalTeachers", "yearFounded", "totalPrograms" }           │
+└─────────────────────────────────────────────────────────────────────────────────────────┘
+
+┌─────────────────────────────────────────────────────────────────────────────────────────┐
+│ 10. PPDB API                                                                            │
+├─────────────────────────────────────────────────────────────────────────────────────────┤
+│ GET /api/ppdb                                                                           │
+│   Deskripsi: Mendapatkan info pendaftaran (jadwal, syarat, kontak)                      │
+│                                                                                         │
+│ PATCH /api/ppdb                                                                         │
+│   Deskripsi: Update info PPDB                                                           │
+│   Input: { "title", "subtitle", "schedule", "requirements", "location", "contact", ... }│
+└─────────────────────────────────────────────────────────────────────────────────────────┘
+
+┌─────────────────────────────────────────────────────────────────────────────────────────┐
+│ 11. DOWNLOAD API                                                                        │
+├─────────────────────────────────────────────────────────────────────────────────────────┤
+│ GET /api/downloads                                                                      │
+│   Deskripsi: Mendapatkan daftar file unduhan                                            │
+│                                                                                         │
+│ POST /api/downloads                                                                     │
+│   Deskripsi: Menambah file unduhan baru                                                 │
+│   Input: { "title", "driveLink", "category" }                                           │
+│                                                                                         │
+│ PATCH /api/downloads/[id]                                                               │
+│   Deskripsi: Update file unduhan                                                        │
+│                                                                                         │
+│ DELETE /api/downloads/[id]                                                              │
+│   Deskripsi: Hapus file unduhan                                                         │
+└─────────────────────────────────────────────────────────────────────────────────────────┘
+
+┌─────────────────────────────────────────────────────────────────────────────────────────┐
+│ 12. UPLOAD API                                                                          │
+├─────────────────────────────────────────────────────────────────────────────────────────┤
+│ POST /api/upload                                                                        │
+│   Deskripsi: Upload gambar ke server                                                    │
+│   Input: FormData with "file"                                                           │
+│   Output: { "url": "/uploads/..." }                                                     │
+└─────────────────────────────────────────────────────────────────────────────────────────┘
+
+
+=============================================
+DATABASE SCHEMA (MySQL/MariaDB with Prisma)
+=============================================
+
+┌─────────────────────────────────────────────────────────────────────────────────────────┐
+│ Model: User                                                                             │
+├─────────────────────────────────────────────────────────────────────────────────────────┤
+│ - id         : String (cuid)                                                            │
+│ - email      : String (unique)                                                          │
+│ - name       : String  ← USED AS USERNAME FOR LOGIN                                     │
+│ - phone      : String? (optional)                                                       │
+│ - role       : String ("admin" | "teacher" | "kepsek")                                  │
+│ - password   : String                                                                   │
+│ - products   : Product[]                                                                │
+│ - createdAt  : DateTime                                                                 │
+│ - updatedAt  : DateTime                                                                 │
+└─────────────────────────────────────────────────────────────────────────────────────────┘
+
+┌─────────────────────────────────────────────────────────────────────────────────────────┐
+│ Model: Product                                                                          │
+├─────────────────────────────────────────────────────────────────────────────────────────┤
+│ - id, name, price, description, image, category                                         │
+│ - shopeeLink, whatsappLink                                                              │
+│ - teacherId  : Relation to User                                                         │
+│ - isFeatured : Boolean (default: false)                                                 │
+└─────────────────────────────────────────────────────────────────────────────────────────┘
+
+┌─────────────────────────────────────────────────────────────────────────────────────────┐
+│ Model: TeacherProfile (for homepage display)                                            │
+├─────────────────────────────────────────────────────────────────────────────────────────┤
+│ - id, name, role, image, bio                                                            │
+└─────────────────────────────────────────────────────────────────────────────────────────┘
+
+┌─────────────────────────────────────────────────────────────────────────────────────────┐
+│ Model: News                                                                             │
+├─────────────────────────────────────────────────────────────────────────────────────────┤
+│ - id, title, date, excerpt, image, slug                                                 │
+│ - images     : NewsImage[] (relation)                                                   │
+│ - comments   : NewsComment[] (relation)                                                 │
+└─────────────────────────────────────────────────────────────────────────────────────────┘
+
+┌─────────────────────────────────────────────────────────────────────────────────────────┐
+│ Model: NewsImage                                                                        │
+├─────────────────────────────────────────────────────────────────────────────────────────┤
+│ - id, newsId, src, caption, order                                                       │
+└─────────────────────────────────────────────────────────────────────────────────────────┘
+
+┌─────────────────────────────────────────────────────────────────────────────────────────┐
+│ Model: NewsComment                                                                      │
+├─────────────────────────────────────────────────────────────────────────────────────────┤
+│ - id, newsId, name, text, createdAt                                                     │
+└─────────────────────────────────────────────────────────────────────────────────────────┘
+
+┌─────────────────────────────────────────────────────────────────────────────────────────┐
+│ Model: PrincipalInfo                                                                    │
+├─────────────────────────────────────────────────────────────────────────────────────────┤
+│ - id (default: "principal-1"), name, title, image, greeting, message                    │
+└─────────────────────────────────────────────────────────────────────────────────────────┘
+
+┌─────────────────────────────────────────────────────────────────────────────────────────┐
+│ Model: Gallery                                                                          │
+├─────────────────────────────────────────────────────────────────────────────────────────┤
+│ - id, src, title, category                                                              │
+└─────────────────────────────────────────────────────────────────────────────────────────┘
+
+┌─────────────────────────────────────────────────────────────────────────────────────────┐
+│ Model: Comment (visitor comments on homepage)                                           │
+├─────────────────────────────────────────────────────────────────────────────────────────┤
+│ - id, name, text, createdAt                                                             │
+└─────────────────────────────────────────────────────────────────────────────────────────┘
+
+┌─────────────────────────────────────────────────────────────────────────────────────────┐
+│ Model: SiteStats                                                                        │
+├─────────────────────────────────────────────────────────────────────────────────────────┤
+│ - id (default: "site-stats-1")                                                          │
+│ - totalStudents, totalTeachers, yearFounded, totalPrograms                              │
+└─────────────────────────────────────────────────────────────────────────────────────────┘
+
+┌─────────────────────────────────────────────────────────────────────────────────────────┐
+│ Model: PPDBInfo                                                                         │
+├─────────────────────────────────────────────────────────────────────────────────────────┤
+│ - id           : String (default: "ppdb-info-1")                                        │
+│ - title        : String                                                                 │
+│ - subtitle     : String                                                                 │
+│ - schedule     : String (Text)                                                          │
+│ - requirements : String (Text)                                                          │
+│ - location     : String (Text)                                                          │
+│ - contact      : String (Text)                                                          │
+│ - infoNote     : String (Text)                                                          │
+└─────────────────────────────────────────────────────────────────────────────────────────┘
+
+┌─────────────────────────────────────────────────────────────────────────────────────────┐
+│ Model: Download                                                                         │
+├─────────────────────────────────────────────────────────────────────────────────────────┤
+│ - id        : String (cuid)                                                             │
+│ - title     : String                                                                    │
+│ - driveLink : String                                                                    │
+│ - category  : String (default: "Umum")                                                  │
+└─────────────────────────────────────────────────────────────────────────────────────────┘
+
+
+=============================================
+FITUR UTAMA / MAIN FEATURES
+=============================================
+
+1. HOMEPAGE (/)
+   - Hero Carousel, Stats, Sambutan, Featured Teachers/News, Shop Preview.
+
+2. ADMIN DASHBOARD (/admin)
+   - CRUD Berita (plus Gallery & Comments management)
+   - CRUD Galeri, Profil Guru, Kepala Sekolah
+   - CRUD Produk
+   - CRUD PPDB Info
+   - CRUD Unduhan (Downloads)
+   - CRUD Akun Guru (Teachers) - add via username
+   - Site Stats Management
+
+3. TEACHER DASHBOARD (/teacher)
+   - Login khusus guru (menggunakan username)
+   - Management produk sendiri
+
+4. SHOP (/shop)
+   - Katalog produk karya siswa/guru
+   - Support WhatsApp & Shopee links
+
+5. BERITA (/berita)
+   - Listing berita sekolah
+   - Detail page includes: Article, Photo Gallery, Public Comments section.
+
+6. GALERI (/gallery)
+   - Foto kegiatan & fasilitas sekolah
+
+7. PROFIL (/profile)
+   - Visi Misi, Sejarah
+   - Daftar Guru & Staff
+
+8. PPDB (/ppdb)
+   - Informasi lengkap pendaftaran siswa baru
+   - Jadwal, Syarat, Lokasi, Kontak
+
+9. UNDUHAN (/unduhan)
+   - Daftar file publik yang bisa diunduh (SK, Formulir, dll)
+   - Link ke Google Drive / Direct Link
+
+
+=============================================
+DEMO ACCOUNTS (USERNAME-BASED LOGIN)
+=============================================
+
+ADMIN:
+┌──────────────┬───────────────┬──────────┐
+│ Username     │ Password      │ Role     │
+├──────────────┼───────────────┼──────────┤
+│ admin        │ admin123      │ admin    │
+│ kepsek       │ kepsek123     │ admin    │
+└──────────────┴───────────────┴──────────┘
+
+TEACHER:
+┌──────────────┬───────────────┬──────────┐
+│ Username     │ Password      │ Role     │
+├──────────────┼───────────────┼──────────┤
+│ budi         │ guru123       │ teacher  │
+│ siti         │ guru123       │ teacher  │
+│ andi         │ guru123       │ teacher  │
+│ dewi         │ guru123       │ teacher  │
+│ rudi         │ guru123       │ teacher  │
+│ maya         │ guru123       │ teacher  │
+└──────────────┴───────────────┴──────────┘
+
+
+=============================================
+COMMANDS
+=============================================
+
+# Install dependencies
+npm install
+
+# Run development server
+npm run dev
+
+# Database commands
+npx prisma migrate deploy     # Apply migrations
+npx prisma generate           # Generate Prisma client
+npx prisma db seed            # Seed database with demo data
+npx prisma db push            # Push schema changes (dev)
+npx prisma studio             # Open Prisma Studio (GUI)
+
+# Build for production
+npm run build
+npm start

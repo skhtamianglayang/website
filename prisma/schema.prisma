@@ -1,0 +1,152 @@
+// This is your Prisma schema file,
+// learn more about it in the docs: https://pris.ly/d/prisma-schema
+
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "mysql"
+  url      = env("DATABASE_URL")
+}
+
+// User accounts (admin and teachers)
+model User {
+  id        String   @id @default(cuid())
+  email     String   @unique
+  name      String
+  phone     String?
+  role      String   // 'admin' or 'teacher' or 'kepsek'
+  password  String
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+  
+  products  Product[]
+}
+
+// Products from teachers
+model Product {
+  id           String   @id @default(cuid())
+  name         String
+  price        Int
+  description  String   @db.Text
+  image        String
+  category     String
+  shopeeLink   String?
+  whatsappLink String?
+  teacherId    String
+  teacher      User     @relation(fields: [teacherId], references: [id], onDelete: Cascade)
+  isFeatured   Boolean  @default(false)
+  createdAt    DateTime @default(now())
+  updatedAt    DateTime @updatedAt
+}
+
+// Teacher profiles displayed on homepage
+model TeacherProfile {
+  id        String   @id @default(cuid())
+  name      String
+  role      String
+  image     String
+  bio       String   @db.Text
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+}
+
+// News/Berita
+model News {
+  id        String   @id @default(cuid())
+  title     String
+  date      String
+  excerpt   String   @db.Text
+  image     String
+  slug      String   @unique
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+  
+  images    NewsImage[]
+  comments  NewsComment[]
+}
+
+// Gallery images for news articles
+model NewsImage {
+  id        String   @id @default(cuid())
+  newsId    String
+  news      News     @relation(fields: [newsId], references: [id], onDelete: Cascade)
+  src       String
+  caption   String?
+  order     Int      @default(0)
+  createdAt DateTime @default(now())
+}
+
+// Comments on news (public - no login required)
+model NewsComment {
+  id        String   @id @default(cuid())
+  newsId    String
+  news      News     @relation(fields: [newsId], references: [id], onDelete: Cascade)
+  name      String
+  text      String   @db.Text
+  createdAt DateTime @default(now())
+}
+
+
+
+// Principal info
+model PrincipalInfo {
+  id       String @id @default("principal-1")
+  name     String
+  title    String
+  image    String
+  greeting String @db.Text
+  message  String @db.Text
+}
+
+// Gallery items
+model Gallery {
+  id        String   @id @default(cuid())
+  src       String
+  title     String
+  category  String
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+}
+
+// Visitor comments
+model Comment {
+  id        String   @id @default(cuid())
+  name      String
+  text      String   @db.Text
+  createdAt DateTime @default(now())
+}
+
+// Site statistics
+model SiteStats {
+  id            String @id @default("site-stats-1")
+  totalStudents Int    @default(150)
+  totalTeachers Int    @default(25)
+  yearFounded   Int    @default(1995)
+  totalPrograms Int    @default(8)
+}
+
+// PPDB Information
+model PPDBInfo {
+  id           String @id @default("ppdb-info-1")
+  title        String @default("Pendaftaran Tahun Ajaran 2025/2026")
+  subtitle     String @default("Dibuka mulai Januari 2025")
+  schedule     String @db.Text
+  requirements String @db.Text
+  location     String @db.Text
+  contact      String @db.Text
+  infoNote     String @db.Text
+  updatedAt    DateTime @updatedAt
+}
+
+// Download files
+model Download {
+  id          String   @id @default(cuid())
+  title       String
+  driveLink   String
+  category    String   @default("Umum")
+  createdAt   DateTime @default(now())
+  updatedAt   DateTime @updatedAt
+}
+
