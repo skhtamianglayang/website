@@ -51,3 +51,10 @@ next-env.d.ts
 deploy-package/
 
 /app/generated/prisma
+
+# documentation files (not needed in repo)
+*.txt
+!package-lock.json.txt
+
+# uploaded files (user content, not part of source code)
+/public/uploads/
