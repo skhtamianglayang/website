@@ -140,7 +140,62 @@ NODE_ENV="production"
 
 3. **Tambah Environment Variables**
    - Scroll ke bagian **Environment Variables**
-   - Untuk setiap variabel:
+   
+   ### Metode 1: Import File .env (TERCEPAT!) 🚀
+   
+   1. **Buat file `.env.production` di local:**
+      ```bash
+      # Copy template
+      cp .env.production.example .env.production
+      
+      # Edit file dengan nilai yang benar
+      nano .env.production
+      # atau
+      code .env.production
+      ```
+   
+   2. **Isi file `.env.production` dengan nilai sebenarnya:**
+      ```env
+      DATABASE_URL="postgresql://user:pass@host:5432/db"
+      SESSION_SECRET="your-generated-secret-key-min-32-chars"
+      NODE_ENV="production"
+      ```
+   
+   3. **Di Vercel Dashboard:**
+      - Klik tombol **Add New** di bagian Environment Variables
+      - Pilih **Plaintext** (bukan Single Variable)
+      - Copy-paste SELURUH isi file `.env.production` Anda
+      - Pilih environment: ✅ Production, ✅ Preview, ✅ Development
+      - Klik **Save**
+   
+   ✅ **Selesai!** Semua variabel langsung ter-import sekaligus.
+   
+   ---
+   
+   ### Metode 2: Via Vercel CLI (Untuk Advanced Users)
+   
+   ```bash
+   # Install Vercel CLI jika belum
+   npm install -g vercel
+   
+   # Login
+   vercel login
+   
+   # Link project
+   vercel link
+   
+   # Import environment variables dari file
+   vercel env pull .env.production
+   
+   # Atau push dari local ke Vercel
+   vercel env add DATABASE_URL production < .env.production
+   ```
+   
+   ---
+   
+   ### Metode 3: Manual Input (Satu per Satu)
+   
+   Untuk setiap variabel, isi seperti ini:
 
    **Variable 1: DATABASE_URL**
    - Key: `DATABASE_URL`
@@ -164,6 +219,7 @@ NODE_ENV="production"
    - Setelah semua env vars di-set, klik **Deployments**
    - Klik titik tiga (...) di deployment terbaru
    - Klik **Redeploy**
+
 
 ---
 
