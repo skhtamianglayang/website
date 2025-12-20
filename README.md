@@ -59,8 +59,31 @@ Required environment variables (set in cPanel NodeJS Selector):
 - `SESSION_SECRET` - Secret key for sessions
 - `NODE_ENV=production`
 
-## Deploy on Vercel (Alternative)
+## Deploy on Vercel
 
-You can also deploy on [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme).
+**Recommended for easy deployment!**
 
-Check out the [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+This application is ready to deploy on Vercel with just a few clicks.
+
+### Quick Deploy
+
+[![Deploy with Vercel](https://vercel.com/button)](https://vercel.com/new/clone?repository-url=https://github.com/J4T3L/this_idonknow)
+
+### Manual Deployment
+
+See [DEPLOY-VERCEL.md](./DEPLOY-VERCEL.md) for complete step-by-step instructions including:
+- Environment variable setup
+- Database configuration
+- Prisma migration
+- Troubleshooting common issues
+
+**What you'll need:**
+1. Vercel account (free)
+2. PostgreSQL database (Vercel Postgres, Supabase, etc.)
+3. Environment variables:
+   - `DATABASE_URL` - PostgreSQL connection string
+   - `SESSION_SECRET` - Secret key for sessions
+   - `NODE_ENV=production`
+
+**Note**: The repository is already configured with `postinstall` script to automatically generate Prisma Client during deployment.
+
