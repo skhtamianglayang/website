@@ -7,7 +7,8 @@
     "build": "next build",
     "start": "NODE_ENV=production node server.js",
     "lint": "eslint",
-    "deploy:package": "bash scripts/create-deploy-package.sh"
+    "deploy:package": "bash scripts/create-deploy-package.sh",
+    "postinstall": "prisma generate"
   },
   "prisma": {
     "seed": "npx tsx prisma/seed.ts"
