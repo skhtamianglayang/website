@@ -19,7 +19,7 @@ export default function ShopPage() {
     return (
         <>
             {/* Hero */}
-            <section className="relative h-[calc(100vh-120px)] mt-[120px] overflow-hidden">
+            <section className="relative min-h-screen pt-[60px] sm:pt-[80px] md:pt-[100px] lg:pt-[120px] overflow-hidden">
                 {/* Background Image */}
                 <div
                     className="absolute inset-0"
@@ -36,12 +36,12 @@ export default function ShopPage() {
 
                 {/* Content */}
                 <div className="relative h-full flex flex-col items-center justify-center
-                    px-4 sm:px-6 lg:px-8 text-center text-white">
+                    px-4 sm:px-6 lg:px-8 text-center text-white mt-24">
                     <h1 className="text-4xl sm:text-5xl font-bold mb-6">
                         Produk Vokasi
                     </h1>
                     <p className="text-xl text-white/80 max-w-2xl">
-                        Karya tangan siswa SLB Tunas Kasih berkualitas dan penuh kasih
+                        Karya tangan siswa SKH Tamiang Layang berkualitas dan penuh kasih
                     </p>
                 </div>
             </section>

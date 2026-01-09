@@ -6,7 +6,7 @@ generator client {
 }
 
 datasource db {
-  provider = "postgresql"
+  provider = "sqlite"
   url      = env("DATABASE_URL")
 }
 
@@ -29,7 +29,7 @@ model Product {
   id           String   @id @default(cuid())
   name         String
   price        Int
-  description  String   @db.Text
+  description  String
   image        String
   category     String
   shopeeLink   String?
@@ -47,7 +47,7 @@ model TeacherProfile {
   name      String
   role      String
   image     String
-  bio       String   @db.Text
+  bio       String
   createdAt DateTime @default(now())
   updatedAt DateTime @updatedAt
 }
@@ -57,7 +57,7 @@ model News {
   id        String   @id @default(cuid())
   title     String
   date      String
-  excerpt   String   @db.Text
+  excerpt   String
   image     String
   slug      String   @unique
   createdAt DateTime @default(now())
@@ -84,7 +84,7 @@ model NewsComment {
   newsId    String
   news      News     @relation(fields: [newsId], references: [id], onDelete: Cascade)
   name      String
-  text      String   @db.Text
+  text      String
   createdAt DateTime @default(now())
 }
 
@@ -96,8 +96,8 @@ model PrincipalInfo {
   name     String
   title    String
   image    String
-  greeting String @db.Text
-  message  String @db.Text
+  greeting String
+  message  String
 }
 
 // Gallery items
@@ -114,7 +114,7 @@ model Gallery {
 model Comment {
   id        String   @id @default(cuid())
   name      String
-  text      String   @db.Text
+  text      String
   createdAt DateTime @default(now())
 }
 
@@ -132,11 +132,11 @@ model PPDBInfo {
   id           String @id @default("ppdb-info-1")
   title        String @default("Pendaftaran Tahun Ajaran 2025/2026")
   subtitle     String @default("Dibuka mulai Januari 2025")
-  schedule     String @db.Text
-  requirements String @db.Text
-  location     String @db.Text
-  contact      String @db.Text
-  infoNote     String @db.Text
+  schedule     String
+  requirements String
+  location     String
+  contact      String
+  infoNote     String
   updatedAt    DateTime @updatedAt
 }
 

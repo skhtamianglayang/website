@@ -52,7 +52,7 @@ export default function PPDBPage() {
     return (
         <>
             {/* Hero */}
-            <section className="relative h-[calc(100vh-120px)] mt-[120px] overflow-hidden">
+            <section className="relative min-h-screen pt-[60px] sm:pt-[80px] md:pt-[100px] lg:pt-[120px] overflow-hidden">
                 {/* Background Image */}
                 <div
                     className="absolute inset-0"
@@ -68,7 +68,7 @@ export default function PPDBPage() {
                 <div className="absolute inset-0 bg-black/40" />
 
                 {/* Content */}
-                <div className="relative h-full flex flex-col items-center justify-center px-4 sm:px-6 lg:px-8 text-center text-white">
+                <div className="relative h-full flex flex-col items-center justify-center px-4 sm:px-6 lg:px-8 text-center text-white mt-24">
                     <h1 className="text-4xl sm:text-5xl font-bold mb-6">
                         PPDB
                     </h1>

@@ -11,7 +11,7 @@ export default function BeritaPage() {
     return (
         <>
             {/* Hero */}
-            <section className="relative h-[calc(100vh-120px)] mt-[120px] overflow-hidden">
+            <section className="relative min-h-screen pt-[60px] sm:pt-[80px] md:pt-[100px] lg:pt-[120px] overflow-hidden">
                 {/* Background Image */}
                 <div
                     className="absolute inset-0"
@@ -28,12 +28,12 @@ export default function BeritaPage() {
 
                 {/* Content */}
                 <div className="relative h-full flex flex-col items-center justify-center
-                    px-4 sm:px-6 lg:px-8 text-center text-white">
+                    px-4 sm:px-6 lg:px-8 text-center text-white mt-24">
                     <h1 className="text-4xl sm:text-5xl font-bold mb-6">
                         Berita & Kegiatan
                     </h1>
                     <p className="text-xl text-white/80 max-w-2xl">
-                        Informasi terbaru seputar kegiatan dan berita dari SLB Tunas Kasih Surabaya
+                        Informasi terbaru seputar kegiatan dan berita dari SKH Tamiang Layang
                     </p>
                 </div>
             </section>

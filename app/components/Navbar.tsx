@@ -72,9 +72,9 @@ export default function Navbar() {
 
                     {/* Logo Kanan + Mobile Menu */}
                     <div className="flex items-center gap-2 sm:gap-3">
-                        <div className="w-10 h-10 sm:w-14 md:w-16 sm:h-14 md:h-16 flex items-center justify-center">
+                        {/* <div className="w-10 h-10 sm:w-14 md:w-16 sm:h-14 md:h-16 flex items-center justify-center">
                             <Image src="/img/bulls2.png" alt="Logo 2" width={60} height={60} className="w-10 h-10 sm:w-12 sm:h-12 md:w-14 md:h-14" />
-                        </div>
+                        </div> */}
 
                         {/* Mobile Menu Button */}
                         <button

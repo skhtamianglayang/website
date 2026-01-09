@@ -26,7 +26,7 @@ export default function HeroCarousel({ slides, autoPlayInterval = 5000 }: HeroCa
     const next = () => setCurrent((current + 1) % slides.length);
 
     return (
-        <div className="relative w-full h-[calc(100vh-120px)] mt-[120px] overflow-hidden">
+        <div className="relative w-full min-h-screen pt-[60px] sm:pt-[80px] md:pt-[100px] lg:pt-[120px] overflow-hidden">
             {slides.map((slide, index) => (
                 <div
                     key={index}
@@ -40,7 +40,7 @@ export default function HeroCarousel({ slides, autoPlayInterval = 5000 }: HeroCa
                     />
                     <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-black/20 to-transparent" />
                     {(slide.title || slide.subtitle) && (
-                        <div className="absolute bottom-16 left-0 right-0 text-center text-white px-4">
+                        <div className="absolute inset-0 flex flex-col items-center justify-center text-center text-white px-4">
                             {slide.title && (
                                 <h2 className="text-3xl md:text-5xl font-bold mb-3 drop-shadow-lg">{slide.title}</h2>
                             )}
