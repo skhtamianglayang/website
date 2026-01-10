@@ -34,36 +34,12 @@ const carouselSlides = [
 const newsItems: NewsItem[] = [
   {
     id: "news-1",
-    title: "MPLS SLB Tunas Kasih Surabaya",
+    title: "MPLS SKH Tamiang Layang",
     date: "10 Des 2024",
-    excerpt: "Pada awal tahun ajaran baru 2024/2025, SLB Tunas Kasih Surabaya mengadakan kegiatan Masa Pengenalan Lingkungan Sekolah...",
+    excerpt: "Pada awal tahun ajaran baru 2024/2025, SKH mengadakan kegiatan Masa Pengenalan Lingkungan Sekolah...",
     image: "https://images.unsplash.com/photo-1523050854058-8df90110c9f1?w=600&h=400&fit=crop",
     slug: "mpls-2024",
-  },
-  {
-    id: "news-2",
-    title: "Perkemahan Kamis-Jum'at SLB Tunas Kasih",
-    date: "5 Des 2024",
-    excerpt: "SLB Tunas Kasih Surabaya menyelenggarakan kegiatan Perkemahan untuk membangun kemandirian siswa...",
-    image: "https://images.unsplash.com/photo-1504280390367-361c6d9f38f4?w=600&h=400&fit=crop",
-    slug: "perkemahan-2024",
-  },
-  {
-    id: "news-3",
-    title: "Workshop Keterampilan Vokasi",
-    date: "1 Des 2024",
-    excerpt: "Siswa kelas besar mengikuti workshop keterampilan vokasi yang meliputi menjahit, memasak, dan kerajinan tangan...",
-    image: "https://images.unsplash.com/photo-1522202176988-66273c2fd55f?w=600&h=400&fit=crop",
-    slug: "workshop-vokasi",
-  },
-  {
-    id: "news-4",
-    title: "Kunjungan Industri ke Pabrik UKM",
-    date: "28 Nov 2024",
-    excerpt: "Dalam rangka memperkenalkan dunia kerja, siswa melakukan kunjungan industri ke beberapa UKM lokal...",
-    image: "https://images.unsplash.com/photo-1556761175-5973dc0f32e7?w=600&h=400&fit=crop",
-    slug: "kunjungan-industri",
-  },
+  }
 ];
 
 const featuredProducts = [
