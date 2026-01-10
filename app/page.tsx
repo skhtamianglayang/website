@@ -36,7 +36,7 @@ const newsItems: NewsItem[] = [
     id: "news-1",
     title: "MPLS SKH Tamiang Layang",
     date: "10 Des 2024",
-    excerpt: "Pada awal tahun ajaran baru 2024/2025, SKH mengadakan kegiatan Masa Pengenalan Lingkungan Sekolah...",
+    excerpt: "Pada awal tahun ajaran baru 2024/2025, SKH Tamiang Layang mengadakan kegiatan Masa Pengenalan Lingkungan Sekolah...",
     image: "https://images.unsplash.com/photo-1523050854058-8df90110c9f1?w=600&h=400&fit=crop",
     slug: "mpls-2024",
   }
@@ -483,7 +483,7 @@ export default function Home() {
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center text-white">
           <h2 className="text-3xl md:text-4xl font-bold mb-4">Pendaftaran Siswa Baru</h2>
           <p className="text-lg opacity-90 mb-8">
-            Daftarkan putra-putri Anda sekarang dan bergabung bersama keluarga besar SLB Tunas Kasih.
+            Daftarkan putra-putri Anda sekarang dan bergabung bersama keluarga besar SKH Tamiang Layang.
           </p>
           <Link href="/ppdb">
             <Button
