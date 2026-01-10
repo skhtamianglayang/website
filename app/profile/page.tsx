@@ -146,13 +146,13 @@ export default function ProfilePage() {
                     <div>
                         <div className="space-y-4 text-slate-600 leading-relaxed">
                             <p>
-                                SLB Tunas Kasih berdiri pada tahun 1995 atas prakarsa sekelompok pendidik dan
+                                SKH Tamiang Layang berdiri pada tahun 1995 atas prakarsa sekelompok pendidik dan
                                 aktivis sosial yang peduli terhadap pendidikan anak berkebutuhan khusus di
-                                Surabaya. Berawal dari sebuah ruangan kecil dengan beberapa siswa, sekolah ini
+                                Kalimantan Tengah. Berawal dari sebuah ruangan kecil dengan beberapa siswa, sekolah ini
                                 terus berkembang berkat dukungan masyarakat.
                             </p>
                             <p>
-                                Pada tahun 2005, SLB Tunas Kasih mendapatkan akreditasi resmi dan mulai
+                                Pada tahun 2005, SKH Tamiang Layang mendapatkan akreditasi resmi dan mulai
                                 mengembangkan program vokasi untuk membekali siswa dengan keterampilan hidup.
                                 Hingga saat ini, kami telah meluluskan ratusan siswa yang mampu mandiri dan
                                 berkontribusi di masyarakat.
