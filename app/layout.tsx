@@ -17,7 +17,7 @@ const geistMono = Geist_Mono({
 
 export const metadata: Metadata = {
   title: "SKH Tamiang Layang",
-  description: "Sekolah Luar Biasa Tunas Kasih - Mendidik dengan Kasih, Membangun dengan Harapan. Pendidikan berkualitas untuk anak berkebutuhan khusus.",
+  description: "SKH Tamiang Layang - Mendidik dengan Kasih, Membangun dengan Harapan. Pendidikan berkualitas untuk anak berkebutuhan khusus di Kalimantan Tengah.",
 };
 
 export default function RootLayout({
