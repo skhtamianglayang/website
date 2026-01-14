@@ -83,10 +83,11 @@ export default function Footer() {
                         <div className="w-full h-40 rounded-lg overflow-hidden border border-slate-700">
                             <iframe
                                 title="Lokasi Sekolah"
-                                src="https://maps.google.com/?q=-2.11587,115.16886"
+                                src="https://www.google.com/maps?q=-2.11587,115.16886&output=embed"
                                 className="w-full h-full"
                                 loading="lazy"
                                 referrerPolicy="no-referrer-when-downgrade"
+                                allowFullScreen
                             />
                         </div>
                     </div>
