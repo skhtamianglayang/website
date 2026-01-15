@@ -217,8 +217,7 @@ export default function ProfilePage() {
                         </div>
                         <h3 className="text-2xl font-bold mb-4">Visi</h3>
                         <p className="text-white/90 leading-relaxed">
-                            Menjadi lembaga pendidikan khusus terdepan yang menghasilkan peserta didik
-                            berkebutuhan khusus yang mandiri, berkarakter, dan bermanfaat bagi masyarakat.
+                            Terwujudnya Peserta Didik yang Beriman, Berkarakter, Terampil, dan Memiliki Kecakapan Hidup
                         </p>
                     </div>
 
@@ -235,11 +234,15 @@ export default function ProfilePage() {
                             </svg>
                         </div>
                         <h3 className="text-2xl font-bold mb-4">Misi</h3>
-                        <ul className="text-white/90 leading-relaxed space-y-2">
-                            <li>• Memberikan layanan pendidikan sesuai kebutuhan individu</li>
-                            <li>• Mengembangkan potensi dan bakat setiap peserta didik</li>
-                            <li>• Membekali keterampilan vokasi untuk kemandirian</li>
-                            <li>• Membangun karakter dan soft skills</li>
+                        <ul className="text-white/90 leading-relaxed space-y-2 text-sm">
+                            <li>• Membimbing dan Mengarahkan Peserta Didik untuk Melaksanakan Ibadah sesuai Perintah Agama</li>
+                            <li>• Melaksanakan Kegiatan Pembelajaran yang Inovatif melalui Pengembangan Dimensi Profil Pelajar Pancasila</li>
+                            <li>• Meningkatkan Prestasi Peserta Didik dalam Bidang Potensi Akademik maupun Non Akademik</li>
+                            <li>• Mengasah Potensi Peserta Didik dalam Bidang Teknologi melalui Inovasi dan Kolaborasi</li>
+                            <li>• Memfasilitasi SLBN Tamiang Layang sebagai Pusat Talenta, Bahasa, dan Komunikasi Bagi Anak</li>
+                            <li>• Memupuk Minat dan Bakat Peserta Didik sesuai dengan Kompetensi yang dimilikinya</li>
+                            <li>• Mendorong dan Melatih Peserta Didik melalui Kegiatan Keterampilan Kecakapan Hidup dan Kewirausahaan</li>
+                            <li>• Membiasakan Budaya Peduli dan Rasa Empati Terhadap Lingkungan Sekolah yang Ramah, Sehat, dan Tertib</li>
                         </ul>
                     </div>
                 </div>
