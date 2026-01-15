@@ -60,11 +60,12 @@ export default function Footer() {
 
                                 {/* Link ke Google Maps */}
                                 <a
-                                    href="https://maps.google.com/?q=-2.11587,115.16886"
+                                    href="https://maps.google.com/?q=V5FJ+C42,+Matabu,+Dusun+Timur"
                                     target="_blank"
+                                    rel="noopener noreferrer"
                                     className="hover:text-emerald-400 transition-colors"
                                 >
-                                    Jl Ahmad Yani NO.07 KABUPATEN BARITO TIMUR.
+                                    V5FJ+C42, Matabu, Dusun Timur, Kab. Barito Timur, Kalimantan Tengah 73671
                                 </a>
                             </li>
 
@@ -83,7 +84,7 @@ export default function Footer() {
                         <div className="w-full h-40 rounded-lg overflow-hidden border border-slate-700">
                             <iframe
                                 title="Lokasi Sekolah"
-                                src="https://www.google.com/maps?q=-2.11587,115.16886&output=embed"
+                                src="https://www.google.com/maps?q=V5FJ+C42,+Matabu,+Dusun+Timur,+East+Barito+Regency,+Central+Kalimantan+73671&output=embed"
                                 className="w-full h-full"
                                 loading="lazy"
                                 referrerPolicy="no-referrer-when-downgrade"
