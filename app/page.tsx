@@ -264,13 +264,13 @@ export default function Home() {
                   Video Kegiatan
                 </h2>
                 <a
-                  href="https://www.youtube.com/watch?v=Xf_iMlq9-Fs"
+                  href="https://www.youtube.com/shorts/dahwZXaCbg4"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="block relative aspect-video rounded-xl overflow-hidden group"
                 >
                   <img
-                    src="https://img.youtube.com/vi/Xf_iMlq9-Fs/maxresdefault.jpg"
+                    src="https://img.youtube.com/vi/dahwZXaCbg4/maxresdefault.jpg"
                     alt="Video Kegiatan SKH"
                     className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
                   />
@@ -383,10 +383,10 @@ export default function Home() {
                 </div> */}
 
                 {/* YouTube Preview */}
-                <a href="https://www.youtube.com/watch?v=Xf_iMlq9-Fs" target="_blank" rel="noopener noreferrer" className="block bg-white rounded-2xl shadow-lg overflow-hidden group hover:shadow-xl transition-shadow">
+                <a href="https://www.youtube.com/shorts/dahwZXaCbg4" target="_blank" rel="noopener noreferrer" className="block bg-white rounded-2xl shadow-lg overflow-hidden group hover:shadow-xl transition-shadow">
                   <div className="relative aspect-video bg-slate-200">
                     <img
-                      src="https://img.youtube.com/vi/Xf_iMlq9-Fs/maxresdefault.jpg"
+                      src="https://img.youtube.com/vi/dahwZXaCbg4/maxresdefault.jpg"
                       alt="YouTube Video"
                       className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
                     />
