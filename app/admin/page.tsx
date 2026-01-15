@@ -37,7 +37,7 @@ export default function AdminDashboard() {
     if (!isAdmin) return null;
 
     const stats = [
-        { label: "Total Guru", value: teachers.length, icon: "👨‍🏫", color: "from-emerald-500 to-teal-500", bgLight: "bg-emerald-50" },
+        { label: "Total Akun", value: teachers.length, icon: "👨‍🏫", color: "from-emerald-500 to-teal-500", bgLight: "bg-emerald-50" },
         { label: "Total Produk", value: products.length, icon: "📦", color: "from-orange-500 to-amber-500", bgLight: "bg-orange-50" },
         { label: "Total Berita", value: news.length, icon: "📰", color: "from-blue-500 to-indigo-500", bgLight: "bg-blue-50" },
         { label: "Produk Unggulan", value: featuredProducts.length, icon: "⭐", color: "from-purple-500 to-pink-500", bgLight: "bg-purple-50" },
@@ -244,3 +244,4 @@ export default function AdminDashboard() {
         </div>
     );
 }
+
