@@ -27,24 +27,6 @@ const featuredProducts = [
     price: 15000,
     image: "https://images.unsplash.com/photo-1611930022073-b7a4ba5fcccd?w=300&h=300&fit=crop",
   },
-  {
-    id: 2,
-    name: "Keset Rajut Handmade",
-    price: 45000,
-    image: "https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=300&h=300&fit=crop",
-  },
-  {
-    id: 3,
-    name: "Bros Kain Perca",
-    price: 20000,
-    image: "https://images.unsplash.com/photo-1535632066927-ab7c9ab60908?w=300&h=300&fit=crop",
-  },
-  {
-    id: 4,
-    name: "Taplak Meja Sulam",
-    price: 75000,
-    image: "https://images.unsplash.com/photo-1584346133934-a3afd2a33c4c?w=300&h=300&fit=crop",
-  },
 ];
 
 export default function Home() {
