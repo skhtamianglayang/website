@@ -151,16 +151,20 @@ export default function Home() {
               <div className="text-3xl sm:text-4xl font-bold mb-1">{siteStats.yearFounded}</div>
               <span className="text-sm opacity-90">Tahun Berdiri</span>
             </div>
-            <span className="text-3xl mb-1">🎯</span>
-            <span className="text-2xl md:text-3xl font-bold">{siteStats.totalPrograms}</span>
-            <span className="text-sm opacity-90">Program Keahlian</span>
+            <div>
+              <div className="text-3xl sm:text-4xl font-bold mb-1">{siteStats.totalStudents}</div>
+              <span className="text-sm opacity-90">Jumlah Siswa</span>
+            </div>
+            <div>
+              <div className="text-3xl sm:text-4xl font-bold mb-1">{siteStats.totalTeachers}</div>
+              <span className="text-sm opacity-90">Tenaga Pendidik</span>
+            </div>
           </div>
         </div>
       </div>
-    </div >
 
-      {/* Main Two-Column Layout with Sidebar */ }
-      < section className = "py-12 bg-slate-50" >
+      {/* Main Two-Column Layout with Sidebar */}
+      < section className="py-12 bg-slate-50" >
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid lg:grid-cols-4 gap-8">
             {/* Left - Main Content (3 columns) */}
@@ -465,22 +469,22 @@ export default function Home() {
         </div>
       </section >
 
-    {/* CTA */ }
-    < section className = "py-16 bg-gradient-to-r from-emerald-600 via-teal-600 to-emerald-700" >
-      <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center text-white">
-        <h2 className="text-3xl md:text-4xl font-bold mb-4">Pendaftaran Siswa Baru</h2>
-        <p className="text-lg opacity-90 mb-8">
-          Daftarkan putra-putri Anda sekarang dan bergabung bersama keluarga besar SKH Tamiang Layang.
-        </p>
-        <Link href="/ppdb">
-          <Button
-            size="lg"
-            className="!bg-white !text-emerald-700 hover:!bg-slate-100"
-          >
-            Daftar Sekarang
-          </Button>
-        </Link>
-      </div>
+      {/* CTA */}
+      < section className="py-16 bg-gradient-to-r from-emerald-600 via-teal-600 to-emerald-700" >
+        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center text-white">
+          <h2 className="text-3xl md:text-4xl font-bold mb-4">Pendaftaran Siswa Baru</h2>
+          <p className="text-lg opacity-90 mb-8">
+            Daftarkan putra-putri Anda sekarang dan bergabung bersama keluarga besar SKH Tamiang Layang.
+          </p>
+          <Link href="/ppdb">
+            <Button
+              size="lg"
+              className="!bg-white !text-emerald-700 hover:!bg-slate-100"
+            >
+              Daftar Sekarang
+            </Button>
+          </Link>
+        </div>
       </section >
     </>
   );
