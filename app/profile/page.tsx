@@ -247,7 +247,7 @@ export default function ProfilePage() {
                             </svg>
                         </div>
                         <h3 className="font-semibold text-lg text-slate-800 mb-2">Email</h3>
-                        <p className="text-slate-600">info@skhn1tamianglayang.sch.id</p>
+                        <p className="text-slate-600">slbn.tamiang.layang@gmail.com</p>
                     </div>
 
                     {/* Phone */}
@@ -258,10 +258,11 @@ export default function ProfilePage() {
                             </svg>
                         </div>
                         <h3 className="font-semibold text-lg text-slate-800 mb-2">Telepon</h3>
-                        <p className="text-slate-600">(031) 1234-5678</p>
+                        <p className="text-slate-600">085212477111</p>
                     </div>
                 </div>
             </Section>
         </>
     );
 }
+
