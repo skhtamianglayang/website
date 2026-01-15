@@ -39,10 +39,9 @@ const staffMembers = [
 ];
 
 const stats = [
-    { label: "Tahun Berdiri", value: "1995" },
+    { label: "Tahun Berdiri", value: "2006" },
     { label: "Total Siswa", value: "150+" },
-    { label: "Tenaga Pendidik", value: "25" },
-    { label: "Program Keahlian", value: "5" },
+    { label: "Guru & Staff", value: "30+" },
 ];
 
 // Component for displaying teachers with dynamic data
@@ -166,20 +165,19 @@ export default function ProfilePage() {
                     <div>
                         <div className="space-y-4 text-slate-600 leading-relaxed">
                             <p>
-                                SKH Tamiang Layang berdiri pada tahun 1995 atas prakarsa sekelompok pendidik dan
-                                aktivis sosial yang peduli terhadap pendidikan anak berkebutuhan khusus di
-                                Kalimantan Tengah. Berawal dari sebuah ruangan kecil dengan beberapa siswa, sekolah ini
-                                terus berkembang berkat dukungan masyarakat.
+                                SKH Negeri 1 Tamiang Layang yang awalnya bernama SLB Negeri Tamiang Layang didirikan pada tahun 2006 dan berubah nomenklatur menjadi SKH N 1 Tamiang Layang pada Januari tahun 2025 sebagai bentuk perhatian dan tanggung jawab pemerintah dalam menyediakan layanan pendidikan khusus bagi Anak Berkebutuhan Khusus (ABK) di wilayah Kabupaten Barito Timur. Pendirian sekolah ini dilatarbelakangi oleh kebutuhan masyarakat yang semakin meningkat terhadap lembaga pendidikan yang mampu memberikan layanan pembelajaran sesuai dengan karakteristik, kemampuan, dan kebutuhan khusus peserta didik.
                             </p>
                             <p>
-                                Pada tahun 2005, SKH Tamiang Layang mendapatkan akreditasi resmi dan mulai
-                                mengembangkan program vokasi untuk membekali siswa dengan keterampilan hidup.
-                                Hingga saat ini, kami telah meluluskan ratusan siswa yang mampu mandiri dan
-                                berkontribusi di masyarakat.
+                                Secara geografis, SKH Negeri 1 Tamiang Layang berlokasi di Jl. Ahmad Yani Desa Matabu Rt.07, Kecamatan Dusun Timur, Kabupaten Barito Timur, Provinsi Kalimantan Tengah. Lokasi ini dipilih karena strategis dan mudah dijangkau, sehingga dapat melayani peserta didik dari berbagai kecamatan di Kabupaten Barito Timur maupun daerah sekitarnya.
                             </p>
                             <p>
-                                Dengan motto &ldquo;Mendidik dengan Kasih, Membangun dengan Harapan&rdquo;, kami
-                                terus berkomitmen memberikan pendidikan terbaik bagi anak-anak berkebutuhan khusus.
+                                Sejak awal berdirinya, SKH Negeri 1 Tamiang Layang berkomitmen untuk memberikan pendidikan yang bermutu, berkeadilan, dan berorientasi pada pengembangan potensi peserta didik secara menyeluruh. Proses pendidikan tidak hanya menitikberatkan pada aspek akademik, tetapi juga pada pembinaan keterampilan, kemandirian, sikap sosial, serta kesiapan peserta didik untuk hidup bermasyarakat.
+                            </p>
+                            <p>
+                                Dalam perjalanan waktu, SKH Negeri 1 Tamiang Layang terus mengalami perkembangan baik dari segi kelembagaan, sarana dan prasarana, maupun kualitas sumber daya manusia. Berbagai program pembelajaran dan pelatihan keterampilan vokasional dikembangkan sebagai upaya membekali peserta didik dengan keterampilan hidup yang relevan. Dukungan dari pemerintah, masyarakat, serta berbagai pemangku kepentingan menjadi faktor penting dalam mendorong kemajuan sekolah hingga saat ini.
+                            </p>
+                            <p>
+                                Dengan semangat pengabdian dan komitmen terhadap pendidikan inklusif, SKH Negeri 1 Tamiang Layang diharapkan terus menjadi pusat layanan pendidikan khusus yang unggul dan mampu mencetak lulusan yang mandiri, berkarakter, dan memiliki keterampilan sesuai dengan potensi masing-masing peserta didik.
                             </p>
                         </div>
                     </div>
