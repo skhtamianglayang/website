@@ -84,7 +84,7 @@ export default function PPDBPage() {
                 <div className="absolute inset-0 bg-black/40" />
 
                 {/* Content */}
-                <div className="relative h-full flex flex-col items-center justify-center px-4 sm:px-6 lg:px-8 text-center text-white mt-24">
+                <div className="relative h-full flex flex-col items-center justify-center px-4 sm:px-6 lg:px-8 text-center text-white mt-40">
                     <h1 className="text-4xl sm:text-5xl font-bold mb-6">
                         {heroBanner.title}
                     </h1>
