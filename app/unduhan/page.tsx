@@ -16,8 +16,24 @@ export default function UnduhPage() {
     const [isLoading, setIsLoading] = useState(true);
     const [selectedCategory, setSelectedCategory] = useState("Semua");
 
+    // Hero banner state
+    const [heroBanner, setHeroBanner] = useState({
+        image: "/hero/hero06.jpg",
+        title: "Unduhan",
+        subtitle: "Download berkas dan dokumen resmi SKH Tamiang Layang",
+    });
+
     useEffect(() => {
         fetchDownloads();
+        // Fetch hero banner
+        fetch("/api/hero-banners?page=unduhan")
+            .then((res) => res.json())
+            .then((data) => {
+                if (data && data.length > 0) {
+                    setHeroBanner(data[0]);
+                }
+            })
+            .catch((err) => console.error("Error fetching hero banner:", err));
     }, []);
 
     const fetchDownloads = async () => {
@@ -48,7 +64,7 @@ export default function UnduhPage() {
                 <div
                     className="absolute inset-0"
                     style={{
-                        backgroundImage: "url('/hero/hero06.jpg')",
+                        backgroundImage: `url('${heroBanner.image}')`,
                         backgroundSize: "cover",
                         backgroundPosition: "center",
                         backgroundRepeat: "no-repeat",
@@ -61,10 +77,10 @@ export default function UnduhPage() {
                 {/* Content */}
                 <div className="relative h-full flex flex-col items-center justify-center px-4 sm:px-6 lg:px-8 text-center text-white mt-24">
                     <h1 className="text-4xl sm:text-5xl font-bold mb-6">
-                        Unduhan
+                        {heroBanner.title}
                     </h1>
                     <p className="text-xl text-white/80 max-w-2xl">
-                        Download berkas dan dokumen resmi SKH Tamiang Layang
+                        {heroBanner.subtitle}
                     </p>
                 </div>
             </section>

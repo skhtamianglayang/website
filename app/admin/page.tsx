@@ -49,6 +49,7 @@ export default function AdminDashboard() {
     ];
 
     const menuKonten = [
+        { href: "/admin/hero-banner", label: "Hero Banner", desc: "Banner halaman utama", icon: "🎨", color: "bg-indigo-100" },
         { href: "/admin/guru-profil", label: "Profil Guru", desc: "Data guru di website", icon: "🧑‍🏫", color: "bg-emerald-100" },
         { href: "/admin/produk", label: "Produk Vokasi", desc: "Kelola produk unggulan", icon: "⭐", color: "bg-orange-100" },
         { href: "/admin/berita", label: "Berita", desc: "Kelola berita terkini", icon: "📰", color: "bg-blue-100" },

@@ -17,8 +17,24 @@ export default function PPDBPage() {
     const [ppdbInfo, setPpdbInfo] = useState<PPDBInfo | null>(null);
     const [isLoading, setIsLoading] = useState(true);
 
+    // Hero banner state
+    const [heroBanner, setHeroBanner] = useState({
+        image: "/hero/hero02.jpg",
+        title: "PPDB",
+        subtitle: "Penerimaan Peserta Didik Baru SKH Tamiang Layang",
+    });
+
     useEffect(() => {
         fetchPPDBInfo();
+        // Fetch hero banner
+        fetch("/api/hero-banners?page=ppdb")
+            .then((res) => res.json())
+            .then((data) => {
+                if (data && data.length > 0) {
+                    setHeroBanner(data[0]);
+                }
+            })
+            .catch((err) => console.error("Error fetching hero banner:", err));
     }, []);
 
     const fetchPPDBInfo = async () => {
@@ -57,7 +73,7 @@ export default function PPDBPage() {
                 <div
                     className="absolute inset-0"
                     style={{
-                        backgroundImage: "url('/hero/hero02.jpg')",
+                        backgroundImage: `url('${heroBanner.image}')`,
                         backgroundSize: "cover",
                         backgroundPosition: "center",
                         backgroundRepeat: "no-repeat",
@@ -70,10 +86,10 @@ export default function PPDBPage() {
                 {/* Content */}
                 <div className="relative h-full flex flex-col items-center justify-center px-4 sm:px-6 lg:px-8 text-center text-white mt-24">
                     <h1 className="text-4xl sm:text-5xl font-bold mb-6">
-                        PPDB
+                        {heroBanner.title}
                     </h1>
                     <p className="text-xl text-white/80 max-w-2xl">
-                        Penerimaan Peserta Didik Baru SKH Tamiang Layang
+                        {heroBanner.subtitle}
                     </p>
                 </div>
             </section>

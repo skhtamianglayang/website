@@ -150,3 +150,17 @@ model Download {
   updatedAt   DateTime @updatedAt
 }
 
+// Hero Banners for all pages
+model HeroBanner {
+  id          String   @id @default(cuid())
+  page        String   // 'home', 'berita', 'gallery', 'ppdb', 'profile', 'unduhan'
+  order       Int      @default(0) // For carousel ordering on homepage
+  image       String   // Image URL/path
+  title       String
+  subtitle    String
+  isActive    Boolean  @default(true)
+  createdAt   DateTime @default(now())
+  updatedAt   DateTime @updatedAt
+  
+  @@unique([page, order])
+}

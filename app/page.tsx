@@ -8,28 +8,6 @@ import NewsCard, { NewsItem } from "./components/NewsCard";
 import Button from "./components/Button";
 import { useData } from "./context/DataContext";
 
-const carouselSlides = [
-  {
-    image: "/hero/hero.jpg",
-    title: "Selamat Datang di SKH Tamiang Layang",
-    subtitle: "Mendidik dengan Kasih, Membangun dengan Harapan",
-  },
-  {
-    image: "/hero/hero01.jpg",
-    title: "Pendidikan Berkualitas untuk Semua",
-    subtitle: "Kami berkomitmen memberikan pendidikan terbaik bagi anak berkebutuhan khusus",
-  },
-  {
-    image: "/hero/hero02.jpg",
-    title: "Fasilitas Modern & Lengkap",
-    subtitle: "Lingkungan belajar yang nyaman dan mendukung perkembangan siswa",
-  },
-  {
-    image: "/hero/hero.jpg",
-    title: "Fasilitas Modern & Lengkap",
-    subtitle: "Lingkungan belajar yang nyaman dan mendukung perkembangan siswa",
-  }
-];
 
 const newsItems: NewsItem[] = [
   {
@@ -71,6 +49,27 @@ const featuredProducts = [
 
 export default function Home() {
   const { news: dynamicNews, featuredProducts: dynamicProducts, teacherProfiles, principalInfo, comments: dynamicComments, addComment, siteStats } = useData();
+
+  // Hero banner state
+  const [carouselSlides, setCarouselSlides] = useState([
+    {
+      image: "/hero/hero.jpg",
+      title: "Selamat Datang di SKH Tamiang Layang",
+      subtitle: "Mendidik dengan Kasih, Membangun dengan Harapan",
+    },
+  ]);
+
+  // Fetch hero banners
+  useEffect(() => {
+    fetch("/api/hero-banners?page=home")
+      .then((res) => res.json())
+      .then((data) => {
+        if (data && data.length > 0) {
+          setCarouselSlides(data.sort((a: any, b: any) => a.order - b.order));
+        }
+      })
+      .catch((err) => console.error("Error fetching hero banners:", err));
+  }, []);
 
   // Comment form state
   const [commentName, setCommentName] = useState("");

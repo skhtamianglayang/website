@@ -1,5 +1,6 @@
 "use client";
 
+import { useState, useEffect } from "react";
 import Section from "../components/Section";
 import Button from "../components/Button";
 import { useData } from "../context/DataContext";
@@ -94,6 +95,25 @@ function GuruSection() {
 }
 
 export default function ProfilePage() {
+    // Hero banner state
+    const [heroBanner, setHeroBanner] = useState({
+        image: "/hero/hero03.jpg",
+        title: "Profil Sekolah",
+        subtitle: "Mengenal lebih dekat SKH Tamiang Layang",
+    });
+
+    // Fetch hero banner
+    useEffect(() => {
+        fetch("/api/hero-banners?page=profile")
+            .then((res) => res.json())
+            .then((data) => {
+                if (data && data.length > 0) {
+                    setHeroBanner(data[0]);
+                }
+            })
+            .catch((err) => console.error("Error fetching hero banner:", err));
+    }, []);
+
     return (
         <>
             {/* Hero */}
@@ -102,7 +122,7 @@ export default function ProfilePage() {
                 <div
                     className="absolute inset-0"
                     style={{
-                        backgroundImage: "url('/hero/hero03.jpg')",
+                        backgroundImage: `url('${heroBanner.image}')`,
                         backgroundSize: "100%", // BESARKAN GAMBAR
                         backgroundPosition: "center",
                         backgroundRepeat: "no-repeat",
@@ -116,10 +136,10 @@ export default function ProfilePage() {
                 <div className="relative h-full flex flex-col items-center justify-center
                     px-4 sm:px-6 lg:px-8 text-center text-white mt-24">
                     <h1 className="text-4xl sm:text-5xl font-bold mb-6">
-                        Profil Sekolah
+                        {heroBanner.title}
                     </h1>
                     <p className="text-xl text-white/80 max-w-2xl">
-                        Mengenal lebih dekat SKH Tamiang Layang
+                        {heroBanner.subtitle}
                     </p>
                 </div>
             </section>

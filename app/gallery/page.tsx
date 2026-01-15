@@ -1,6 +1,6 @@
 "use client";
 
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import Modal from "../components/Modal";
 import Section from "../components/Section";
 import { useData } from "../context/DataContext";
@@ -87,6 +87,25 @@ export default function GalleryPage() {
     const [activeCategory, setActiveCategory] = useState("Semua");
     const [selectedImage, setSelectedImage] = useState<(typeof galleryImages)[0] | null>(null);
 
+    // Hero banner state
+    const [heroBanner, setHeroBanner] = useState({
+        image: "/hero/hero03.jpg",
+        title: "Foto Kegiatan",
+        subtitle: "Foto Kegiatan SKH Tamiang Layang",
+    });
+
+    // Fetch hero banner
+    useEffect(() => {
+        fetch("/api/hero-banners?page=gallery")
+            .then((res) => res.json())
+            .then((data) => {
+                if (data && data.length > 0) {
+                    setHeroBanner(data[0]);
+                }
+            })
+            .catch((err) => console.error("Error fetching hero banner:", err));
+    }, []);
+
     // Use dynamic data if available, otherwise use defaults
     const displayGallery = gallery.length > 0
         ? gallery.map((g, idx) => ({ ...g, id: idx + 1 }))
@@ -105,7 +124,7 @@ export default function GalleryPage() {
                 <div
                     className="absolute inset-0"
                     style={{
-                        backgroundImage: "url('/hero/hero03.jpg')",
+                        backgroundImage: `url('${heroBanner.image}')`,
                         backgroundSize: "100%", // BESARKAN GAMBAR
                         backgroundPosition: "center",
                         backgroundRepeat: "no-repeat",
@@ -119,10 +138,10 @@ export default function GalleryPage() {
                 <div className="relative h-full flex flex-col items-center justify-center
                     px-4 sm:px-6 lg:px-8 text-center text-white mt-24">
                     <h1 className="text-4xl sm:text-5xl font-bold mb-6">
-                        Foto Kegiatan
+                        {heroBanner.title}
                     </h1>
                     <p className="text-xl text-white/80 max-w-2xl">
-                        Foto Kegiatan SKH Tamiang Layang
+                        {heroBanner.subtitle}
                     </p>
                 </div>
             </section>

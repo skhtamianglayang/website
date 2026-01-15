@@ -1,5 +1,6 @@
 "use client";
 
+import { useState, useEffect } from "react";
 import Link from "next/link";
 import Section from "../components/Section";
 import NewsCard from "../components/NewsCard";
@@ -7,6 +8,25 @@ import { useData } from "../context/DataContext";
 
 export default function BeritaPage() {
     const { news } = useData();
+
+    // Hero banner state
+    const [heroBanner, setHeroBanner] = useState({
+        image: "/hero/hero05.jpg",
+        title: "Berita & Kegiatan",
+        subtitle: "Informasi terbaru seputar kegiatan dan berita dari SKH Tamiang Layang",
+    });
+
+    // Fetch hero banner
+    useEffect(() => {
+        fetch("/api/hero-banners?page=berita")
+            .then((res) => res.json())
+            .then((data) => {
+                if (data && data.length > 0) {
+                    setHeroBanner(data[0]);
+                }
+            })
+            .catch((err) => console.error("Error fetching hero banner:", err));
+    }, []);
 
     return (
         <>
@@ -16,7 +36,7 @@ export default function BeritaPage() {
                 <div
                     className="absolute inset-0"
                     style={{
-                        backgroundImage: "url('/hero/hero05.jpg')",
+                        backgroundImage: `url('${heroBanner.image}')`,
                         backgroundSize: "100%", // BESARKAN GAMBAR
                         backgroundPosition: "center",
                         backgroundRepeat: "no-repeat",
@@ -30,10 +50,10 @@ export default function BeritaPage() {
                 <div className="relative h-full flex flex-col items-center justify-center
                     px-4 sm:px-6 lg:px-8 text-center text-white mt-24">
                     <h1 className="text-4xl sm:text-5xl font-bold mb-6">
-                        Berita & Kegiatan
+                        {heroBanner.title}
                     </h1>
                     <p className="text-xl text-white/80 max-w-2xl">
-                        Informasi terbaru seputar kegiatan dan berita dari SKH Tamiang Layang
+                        {heroBanner.subtitle}
                     </p>
                 </div>
             </section>
