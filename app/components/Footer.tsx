@@ -71,12 +71,12 @@ export default function Footer() {
 
                             <li className="flex items-center gap-3">
                                 <span>Email:</span>
-                                <span>info@skhn1tamianglayang.sch.id</span>
+                                <span>slbn.tamiang.layang@gmail.com</span>
                             </li>
 
                             <li className="flex items-center gap-3">
                                 <span>Telp:</span>
-                                <span>(031) 1234-5678</span>
+                                <span>085212477111 </span>
                             </li>
                         </ul>
 
@@ -102,3 +102,4 @@ export default function Footer() {
         </footer>
     );
 }
+
