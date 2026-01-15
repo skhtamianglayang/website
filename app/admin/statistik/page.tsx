@@ -95,48 +95,49 @@ export default function StatsManagement() {
                                 className="w-full px-4 py-3 rounded-xl border border-slate-300 focus:border-emerald-500 focus:ring-2 focus:ring-emerald-500/20 outline-none"
                             />
                         </div>
-
-                        <button
-                            onClick={handleSaveStats}
-                            className="mt-6 px-6 py-3 bg-gradient-to-r from-emerald-600 to-teal-600 text-white rounded-xl font-medium hover:from-emerald-700 hover:to-teal-700 transition-all"
-                        >
-                            Simpan Statistik
-                        </button>
                     </div>
 
-                    {/* Comments Management */}
-                    <div className="bg-white rounded-2xl shadow-lg p-6">
-                        <h2 className="text-xl font-bold text-slate-800 mb-6">Kelola Komentar Pengunjung</h2>
+                    <button
+                        onClick={handleSaveStats}
+                        className="mt-6 px-6 py-3 bg-gradient-to-r from-emerald-600 to-teal-600 text-white rounded-xl font-medium hover:from-emerald-700 hover:to-teal-700 transition-all"
+                    >
+                        Simpan Statistik
+                    </button>
+                </div>
 
-                        {comments.length === 0 ? (
-                            <p className="text-slate-500 text-center py-8">Belum ada komentar.</p>
-                        ) : (
-                            <div className="space-y-4">
-                                {comments.map((comment) => (
-                                    <div key={comment.id} className="flex items-start justify-between gap-4 p-4 bg-slate-50 rounded-xl">
-                                        <div>
-                                            <p className="font-semibold text-slate-700">{comment.name}</p>
-                                            <p className="text-slate-600 text-sm mt-1">{comment.text}</p>
-                                            <p className="text-slate-400 text-xs mt-2">
-                                                {new Date(comment.createdAt).toLocaleDateString("id-ID", {
-                                                    day: "numeric",
-                                                    month: "long",
-                                                    year: "numeric",
-                                                })}
-                                            </p>
-                                        </div>
-                                        <button
-                                            onClick={() => handleDeleteComment(comment.id)}
-                                            className="px-3 py-1 text-red-600 hover:bg-red-50 rounded-lg text-sm"
-                                        >
-                                            Hapus
-                                        </button>
+                {/* Comments Management */}
+                <div className="bg-white rounded-2xl shadow-lg p-6">
+                    <h2 className="text-xl font-bold text-slate-800 mb-6">Kelola Komentar Pengunjung</h2>
+
+                    {comments.length === 0 ? (
+                        <p className="text-slate-500 text-center py-8">Belum ada komentar.</p>
+                    ) : (
+                        <div className="space-y-4">
+                            {comments.map((comment) => (
+                                <div key={comment.id} className="flex items-start justify-between gap-4 p-4 bg-slate-50 rounded-xl">
+                                    <div>
+                                        <p className="font-semibold text-slate-700">{comment.name}</p>
+                                        <p className="text-slate-600 text-sm mt-1">{comment.text}</p>
+                                        <p className="text-slate-400 text-xs mt-2">
+                                            {new Date(comment.createdAt).toLocaleDateString("id-ID", {
+                                                day: "numeric",
+                                                month: "long",
+                                                year: "numeric",
+                                            })}
+                                        </p>
                                     </div>
-                                ))}
-                            </div>
-                        )}
-                    </div>
+                                    <button
+                                        onClick={() => handleDeleteComment(comment.id)}
+                                        className="px-3 py-1 text-red-600 hover:bg-red-50 rounded-lg text-sm"
+                                    >
+                                        Hapus
+                                    </button>
+                                </div>
+                            ))}
+                        </div>
+                    )}
                 </div>
             </div>
-            );
+        </div>
+    );
 }
