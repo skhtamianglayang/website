@@ -11,31 +11,6 @@ const staffMembers = [
         role: "Kepala Sekolah",
         image: "https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=200&h=200&fit=crop&crop=face",
     },
-    {
-        name: "Siti Nurhaliza, S.Pd.",
-        role: "Wakil Kepala Sekolah",
-        image: "https://images.unsplash.com/photo-1438761681033-6461ffad8d80?w=200&h=200&fit=crop&crop=face",
-    },
-    {
-        name: "Budi Santoso, S.Pd.",
-        role: "Guru Kelas",
-        image: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=200&h=200&fit=crop&crop=face",
-    },
-    {
-        name: "Dewi Lestari, S.Pd.",
-        role: "Guru Keterampilan",
-        image: "https://images.unsplash.com/photo-1494790108377-be9c29b29330?w=200&h=200&fit=crop&crop=face",
-    },
-    {
-        name: "Rizky Pratama, S.Pd.",
-        role: "Guru Olahraga",
-        image: "https://images.unsplash.com/photo-1500648767791-00dcc994a43e?w=200&h=200&fit=crop&crop=face",
-    },
-    {
-        name: "Maya Sari, S.Pd.",
-        role: "Guru Seni",
-        image: "https://images.unsplash.com/photo-1534528741775-53994a69daeb?w=200&h=200&fit=crop&crop=face",
-    },
 ];
 
 const stats = [
@@ -184,7 +159,7 @@ export default function ProfilePage() {
                     <div className="relative">
                         <div className="absolute -inset-4 bg-gradient-to-r from-emerald-500 to-teal-500 rounded-2xl blur-xl opacity-20" />
                         <img
-                            src="https://images.unsplash.com/photo-1562774053-701939374585?w=600&h=400&fit=crop"
+                            src="/hero/hero01.jpg"
                             alt="Gedung Sekolah"
                             className="relative rounded-2xl shadow-2xl w-full object-cover"
                         />
