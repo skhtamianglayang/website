@@ -6,14 +6,15 @@ const prisma = new PrismaClient();
 // PUT /api/hero-banners/[id] - Update hero banner (admin only)
 export async function PUT(
     request: NextRequest,
-    { params }: { params: { id: string } }
+    { params }: { params: Promise<{ id: string }> }
 ) {
     try {
+        const { id } = await params; // Await params in Next.js 16+
         const body = await request.json();
         const { page, order, image, title, subtitle, isActive } = body;
 
         const heroBanner = await prisma.heroBanner.update({
-            where: { id: params.id },
+            where: { id },
             data: {
                 ...(page && { page }),
                 ...(order !== undefined && { order }),
@@ -37,11 +38,13 @@ export async function PUT(
 // DELETE /api/hero-banners/[id] - Delete hero banner (admin only)
 export async function DELETE(
     request: NextRequest,
-    { params }: { params: { id: string } }
+    { params }: { params: Promise<{ id: string }> }
 ) {
     try {
+        const { id } = await params; // Await params in Next.js 16+
+
         await prisma.heroBanner.delete({
-            where: { id: params.id },
+            where: { id },
         });
 
         return NextResponse.json({ message: 'Hero banner deleted successfully' });
