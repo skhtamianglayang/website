@@ -51,7 +51,8 @@ export default function AdminDashboard() {
     const menuKonten = [
         { href: "/admin/hero-banner", label: "Hero Banner", desc: "Banner halaman utama", icon: "🎨", color: "bg-indigo-100" },
         { href: "/admin/guru-profil", label: "Profil Guru", desc: "Data guru di website", icon: "🧑‍🏫", color: "bg-emerald-100" },
-        { href: "/admin/produk", label: "Produk Vokasi", desc: "Kelola produk unggulan", icon: "⭐", color: "bg-orange-100" },
+        { href: "/admin/products", label: "Kelola Produk", desc: "Tambah, edit, hapus produk", icon: "📦", color: "bg-blue-100" },
+        { href: "/admin/produk", label: "Produk Unggulan", desc: "Set produk unggulan", icon: "⭐", color: "bg-orange-100" },
         { href: "/admin/berita", label: "Berita", desc: "Kelola berita terkini", icon: "📰", color: "bg-blue-100" },
         { href: "/admin/kepala-sekolah", label: "Kepala Sekolah", desc: "Sambutan di homepage", icon: "👨‍💼", color: "bg-purple-100" },
         { href: "/admin/galeri", label: "Galeri", desc: "Foto kegiatan sekolah", icon: "🖼️", color: "bg-pink-100" },
